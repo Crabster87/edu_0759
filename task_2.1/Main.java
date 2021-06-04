@@ -11,9 +11,23 @@
 •	Текст в каждой строке должен быть уникален.
 •	Должны быть выведены все возможные комбинации. */
 
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
+        List<String> list = Arrays.asList("Мама", "Мыла", "Раму");
+        Set<String> resultSet = new HashSet<>();
+        StringBuilder builder = new StringBuilder();
+        while (resultSet.size() < 6) {
+            Collections.shuffle(list);
+            list.stream().forEach(s -> builder.append(s));
+            resultSet.add(builder.toString());
+            builder.setLength(0);
+        }
+        for (String x:
+             resultSet) {
+            System.out.println(x);
+        }
 
     }
 }

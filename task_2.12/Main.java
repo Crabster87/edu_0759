@@ -8,9 +8,35 @@
 3
 */
 
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
 
+        /** Filling of the array */
+
+        Scanner scanner = new Scanner(System.in);
+        int[] array = new int[10];
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("Enter number N " + (i + 1) + " from 10");
+            array[i] = scanner.nextInt();
+        }
+
+        /** Working with numbers */
+
+        int maxLength = 1;
+        int intermediateVar = 1;
+        for (int i = 0; i < array.length - 1; i++) {
+            if (array[i] == array[i + 1]) {
+                intermediateVar++;
+            } else if (intermediateVar > maxLength) {
+                maxLength = intermediateVar;
+                intermediateVar = 1;
+            } else {
+                intermediateVar = 1;
+            }
+        }
+        System.out.println(maxLength);
     }
+
 }

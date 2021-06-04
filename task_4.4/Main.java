@@ -20,8 +20,8 @@ Mouse jerryMouse = new Mouse("Jerry", 12 , 5),
 public class Main {
     public static void main(String[] args) {
         Mouse jerryMouse = new Mouse("Jerry", 12, 5);
-
-        //напишите тут ваш код
+        Cat tomCat = new Cat("Tom", "Mammy Two Shoes", 32.5);
+        Dog tykeDog = new Dog("Tyke", "Spike", false);
     }
 }
 class Mouse {
@@ -33,5 +33,27 @@ class Mouse {
         this.name = name;
         this.height = height;
         this.tail = tail;
+    }
+}
+class Cat {
+    String name;
+    String ownerName;
+    double height;
+
+    public Cat(String name, String ownerName, double height) {
+        this.name = name;
+        this.ownerName = ownerName;
+        this.height = height;
+    }
+}
+class Dog {
+    String name;
+    String fatherName;
+    boolean isEnemyOfJerry;
+
+    public Dog(String name, String fatherName, boolean isEnemyOfJerry) {
+        this.name = name;
+        this.fatherName = fatherName;
+        this.isEnemyOfJerry = isEnemyOfJerry;
     }
 }

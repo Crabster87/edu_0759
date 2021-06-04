@@ -8,9 +8,17 @@
 250000 */
 
 
+import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        //Ваш код
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter overall dimensions of pool");
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        System.out.println("Quantity of litres is: " + new Pool(a, b, c).calculateVolume());
     }
+
 }

@@ -16,9 +16,13 @@ public class Main {
         Person alex = new Person("Алексей","Иванов",37,olga,valera);
         Person eva  = new Person("Ева","Иванова",37,jula,oleg);
         Person gosha= new Person("Гоша","Иванов",10,eva,alex);
-        System.out.println("Мама Алексея: "+alex.getMother().getName());
-        System.out.println("Бабушка Гоши: "+gosha.getMother().getMother().getName());
-
+        //System.out.println("Мама Алексея: " + alex.getMother().getName());
+        //System.out.println("Бабушка Гоши: " + gosha.getMother().getMother().getName());
+        System.out.println("Меня зовут: " + gosha.getName() + "\"" +
+                         "\nИмя моей мамы: " + gosha.getMother().getName() + "\"" +
+                         "\nИмя моего папы: " + gosha.getFather().getName() + "\"" +
+                         "\nУ меня две бабушки, бабушка " + gosha.getMother().getMother().getName() + "\" и \"" + gosha.getFather().getMother().getName() + "\"" +
+                         "\nУ меня два деда, деда " + gosha.getMother().getFather().getName() + "\" и \"" + gosha.getFather().getFather().getName() + "\"");
     }
 }
 
@@ -29,6 +33,7 @@ class Person{
     private int hp = 100;
     private Person mother;
     private Person father;
+
     public Person(String name, String lastname, int age, Person mother, Person father){
         this.name = name;
         this.lastname = lastname;
@@ -44,6 +49,9 @@ class Person{
     }
     public Person getMother(){
         return this.mother;
+    }
+    public Person getFather() {
+        return this.father;
     }
     public void setHp(int hp){
         if (this.hp+hp>100) this.hp = 100;

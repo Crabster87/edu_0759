@@ -9,8 +9,14 @@ TF = (9 / 5) * TC + 32
 Пример вывода:
 105.8 */
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-       // Ваш код
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter value of temperature in celsius");
+        int degrees = scanner.nextInt();
+        System.out.println("Entered temperature in fahrenheits is: " +
+                ((9 / 5.) * degrees + 32));
     }
 }

@@ -13,8 +13,8 @@
 Абрамовичи */
 
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 /* 
@@ -22,6 +22,30 @@ import java.util.Scanner;
 */
 
 public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        Map<String, String> map = new HashMap<>();
+        while (true) {
+            String city = scanner.nextLine();
+            if (city.isEmpty()) {
+                break;
+            }
+            String family = scanner.nextLine();
+            map.put(city, family);
+        }
+
+        // Read the city
+        String homeCity = scanner.nextLine();
+        if (map.containsKey(homeCity)) System.out.println(map.get(homeCity));
+        else
+            System.out.println("Nobody lives in this city");
+    }
+
+
+    /** Version with numbers of houses
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -43,4 +67,6 @@ public class Main {
             System.out.println(familyName);
         }
     }
+    */
+
 }
