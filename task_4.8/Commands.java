@@ -1,2 +1,13 @@
-package PACKAGE_NAME;public enum Comands {
+public enum Commands {
+
+    GET_FREE_ROOMS,
+    RESERVE_ROOM,
+    FREE_ROOM,
+    SHOW_ROOM_PROPERTIES,
+    GET_WITH_WIFI_ROOMS,
+    GET_WITH_WC_ROOMS,
+    GET_WITH_EAT_ROOMS,
+    GET_ROOMS_BY_QUANTITY_PLACES,
+    EXIT;
+
 }
